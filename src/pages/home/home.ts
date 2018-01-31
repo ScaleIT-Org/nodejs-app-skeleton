@@ -17,19 +17,5 @@ export class HomePage {
     }
  
     ionViewDidLoad() {
- 
-        this.barChart = new Chart(this.barCanvas.nativeElement, {
- 
-            type: 'bar',
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero:false
-                        }
-                    }]
-                }
-            }
-        });
-        }
+    }
 }

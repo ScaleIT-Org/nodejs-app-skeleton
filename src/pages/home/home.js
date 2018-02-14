@@ -9,25 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Chart } from 'chart.js';
 var HomePage = /** @class */ (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
     HomePage.prototype.ionViewDidLoad = function () {
-        this.barChart = new Chart(this.barCanvas.nativeElement, {
-            type: 'bar',
-            
-            options: {
-                scales: {
-                    yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                }
-            }
-        });
     };
     __decorate([
         ViewChild('barCanvas'),

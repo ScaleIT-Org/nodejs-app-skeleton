@@ -1,16 +1,20 @@
+<img src="https://raw.githubusercontent.com/ScaleIT-Org/media-ressources/master/logo/scaleit-logo.png" width="20%"/>
+
 # Node.js App Skeleton
 
 The Node.js App Skeleton is a pre-configured base for ScaleIT Apps. It provides a ready to use Node.js server, dockerization and Ionic integration.
-
-[[Screenshot]]
-
-## Technology Stack
-    Node.js->(Typescript->Angular->Ionic)
 
 Skeleton Functionality:
 
 1) Node.js Server for static files
 2) Ionic frontend
+
+| Mobile        | Desktop       |
+| ------------- | ------------- |
+| <img src="https://github.com/ScaleIT-Org/nodejs-app-skeleton/blob/master/Resources/Store/Screenshots/App%20Screenshot%20Mobile.png"/> | <img src="https://github.com/ScaleIT-Org/nodejs-app-skeleton/blob/master/Resources/Store/Screenshots/App%20Screenshot%20Desktop.png"/> |
+
+## Technology Stack
+    Node.js->(Typescript->Angular->Ionic)
 
 ## Usage (Standalone)
 
@@ -31,6 +35,10 @@ Docker:
 Docker Compose:
 
     docker-compose up
+    
+## Development
+
+TODO: add description for launching bind mounted volumes and hot swap ionic build.
     
 ## Health Check (Optional)
         #Build with healtcheck enabled

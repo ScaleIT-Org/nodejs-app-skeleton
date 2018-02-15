@@ -38,7 +38,9 @@ Docker Compose:
     
 ## Development
 
-TODO: add description for launching bind mounted volumes and hot swap ionic build.
+In order to simplify development we recommend working locally (or with a docker bind mount) and using the ionic hot reload feature of the ionic dev server
+
+    npm run ionic:serve
     
 ## Health Check (Optional)
         #Build with healtcheck enabled

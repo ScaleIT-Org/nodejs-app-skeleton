@@ -1,3 +1,41 @@
+# Ionic ignores from https://github.com/ionic-team/ionic/blob/master/.gitignore
+*~
+*.sw[mnpcod]
+*.log
+*.lock
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+
+.idea/
+.sourcemaps/
+.vscode/
+.sass-cache/
+.versions/
+coverage/
+dist/
+node_modules/
+tmp/
+temp/
+$RECYCLE.BIN/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+.env
+
+.package.tmp.json
+
+src/themes/version.scss
+scripts/e2e/webpackEntryPoints.json
+scripts/build/e2e-generated-tsconfig.json
+*.css.ts
+
+# Ignore Ionic build
+www/
+
 # Logs
 logs
 *.log

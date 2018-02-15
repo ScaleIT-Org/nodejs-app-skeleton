@@ -1,7 +1,7 @@
-FROM node:carbon
+FROM node:carbon-alpine
 
 # Upgrade OS dependencies
-RUN apt-get update && apt-get upgrade -y
+RUN apk update && apk upgrade
 
 # Set the working directory to the location of our app
 WORKDIR /opt/app

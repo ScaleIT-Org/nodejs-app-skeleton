@@ -42,6 +42,19 @@ In order to simplify development we recommend working locally (or with a docker 
 
     npm run ionic:serve
     
+In order to pull from this repo as upstream you should use githubs rebasing feature:
+
+    git checkout alpine
+    git pull --rebase origin master
+
+    git checkout dev
+    git pull --rebase origin alpine
+
+Alternatively use cherry picking (or patching):
+
+    git cherry-pick d147423..2622049
+    git cherry-pick d147423
+    
 ## Health Check (Optional)
         #Build with healtcheck enabled
         HEALTHCHECK --interval=5m --timeout=3s \

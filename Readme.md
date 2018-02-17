@@ -59,6 +59,42 @@ Alternatively use cherry picking (or patching):
         #Build with healtcheck enabled
         HEALTHCHECK --interval=5m --timeout=3s \
         CMD curl -f http://localhost:5002/ || exit 1
+        
+## Navigation and Pages
+
+    <!-- Uses classical html navigation -->
+    <a href="/#/page2">Jump to Page2</a>
+
+
+    <!-- Use the ionic stack for navigation (automatic back button) -->
+    <!-- Text Button -->
+    <button [navPush]=”page2”>Push Page2 onto the stack and navigate to it</button>
+
+    <!-- Style Icon Button -->
+    <button [navPush]=”page2” ion-button icon-only>
+      <ion-icon name=”information-circle”></ion-icon>
+    </button>
+   
+Don't forget to declare the page in your parent component if you want to use the stack navigation:
+
+    /** ==========
+    Homepage TypeScript
+     ========== **/
+
+    import { Component, ViewChild } from '@angular/core';
+    import { NavController } from "ionic-angular";
+    import { Page2 } from "../page2/page2";
+
+    @Component({
+      selector: "page-home",
+      templateUrl: "home.html"
+    })
+    export class HomePage {
+      //------
+      // this is the important part for working with the ionic stack
+      page2 = Page2;
+      //------  
+
 
 ## Learning Material
 

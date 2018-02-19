@@ -6,6 +6,10 @@ RUN apt-get update && apt-get upgrade -y
 # Set the working directory to the location of our app
 WORKDIR /opt/app
 
+#Timezone
+RUN echo "Europe/Berlin" > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
+
 # Copy Node.js App dependency manifest
 COPY package.json ./package.json
 # Install Node.js dependencies

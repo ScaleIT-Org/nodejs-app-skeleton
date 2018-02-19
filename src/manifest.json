@@ -1,13 +1,17 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "ScaleIT Ionic NodeJS Sample App",
+  "short_name": "ScaleIT",
   "start_url": "index.html",
   "display": "standalone",
+  "description": "Application Template with Ionic frontend based on NodeJS Backend",
   "icons": [{
-    "src": "assets/imgs/logo.png",
-    "sizes": "512x512",
+    "src": "assets/wabe-logo.png",
+    "sizes": "555x556",
     "type": "image/png"
   }],
   "background_color": "#4e8ef7",
-  "theme_color": "#4e8ef7"
+  "theme_color": "#4e8ef7",
+   "related_applications": [{
+    "platform": "Web"
+  }]
 }

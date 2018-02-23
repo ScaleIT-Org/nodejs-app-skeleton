@@ -25,6 +25,18 @@ app.use(function(req, res, next) {
    next();
 });
  
+//might fix the # problem when using locationpathstrategy
+// app.get("*", (req, res, next) => {
+//   if (
+//     req.url.indexOf("#") > -1 ||
+//     (req.url.lastIndexOf(".") === -1 ||
+//       req.url.indexOf("/", req.url.lastIndexOf(".")) > -1)
+//   ) {
+//     req.url = `/#${req.url}`;
+//   }
+//   next();
+// });
+
 // Routes
 app.get('/', function (req, res)
 {

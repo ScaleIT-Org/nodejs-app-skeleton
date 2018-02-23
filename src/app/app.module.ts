@@ -1,37 +1,46 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { Observable } from 'rxjs/Rx'
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+import {HttpModule} from '@angular/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { ErrorHandler, NgModule } from "@angular/core";
+import { Observable } from "rxjs/Rx";
+import {
+  IonicApp,
+  IonicErrorHandler,
+  IonicModule
+} from "ionic-angular";
+import { SplashScreen } from "@ionic-native/splash-screen";
+import { StatusBar } from "@ionic-native/status-bar";
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { Page2 } from "../pages/page2/page2";
+import { ScaleITApp } from "./app.component";
+
+import { LocationStrategy, PathLocationStrategy, APP_BASE_HREF } from "@angular/common";
 
 @NgModule({
-  declarations: [MyApp, HomePage, Page2],
+  declarations: [ScaleITApp],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(
-      MyApp,
-      {},
-      // this enables deep linking, i.e. http://localhost:3000/#/page2
-      {
-        links: [
-          { component: HomePage, name: "Home", segment: "home" },
-          { component: Page2, name: "Page2", segment: "page2" }
-        ]
-      }
-      // this enables deep linking - end
+      ScaleITApp,
+      {}
+      // remove # from the url - does not work without backend redirects and might only get fixed in ionic 4
+      // { locationStrategy: "path" }
+      // this enables deep linking, i.e. http://localhost:3000/user
+      // {
+      //   links: [
+      //     { component: UserPage, name: "UserPage", segment: "user" },
+      //     { component: AdminPage, name: "AdminPage", segment: "admin" }
+      //   ]
+      // }
     )
+    // this enables deep linking - end
   ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, Page2],
+  // declare your pages here (components used in templates will be loaded separately - as far as we know)
+  entryComponents: [ScaleITApp],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppEntryPointModule {}

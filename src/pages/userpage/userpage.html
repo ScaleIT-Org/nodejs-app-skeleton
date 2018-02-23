@@ -24,12 +24,31 @@
     </ion-card>
     <ion-card>
         <ion-card-header>
-            Page 2
+            ScaleIT App User Page
         </ion-card-header>
         <ion-card-content>
-            Content of Page 2
+            Content
         </ion-card-content>
         <ion-card-content style="height:50vh;">
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Navigation
+        </ion-card-header>
+        <ion-card-content>
+            <!-- Uses classical html navigation -->
+            <a href="/#/admin">Jump to Administration</a>
+
+
+            <!-- Use the ionic stack for navigation (automatic back button) -->
+            <!-- Text Button -->
+            <button [navPush]="admin">Push Page2 onto the stack and navigate to it</button>
+
+            <!-- Style Icon Button -->
+            <button [navPush]="admin" ion-button icon-only>
+              <ion-icon name="information-circle"></ion-icon>
+            </button>
         </ion-card-content>
     </ion-card>
 </ion-content>
